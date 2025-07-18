@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Activity Recommendation System</h1>
+        <img src="{{ url_for('static', filename='input.jpg') }}" width="250px" height="250px" alt="Activities">
+        <form action="/recommend" method="post">
+            <label for="preferences">Enter your preferences:</label>
+            <input type="text" id="preferences" name="preferences" placeholder="e.g., I enjoy high-intensity workouts and outdoor activities." required>
+            <input type="submit" value="Get Recommendations">
+        </form>
+    </div>
+</body>
+</html>
